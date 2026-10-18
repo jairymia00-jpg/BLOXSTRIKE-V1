@@ -287,7 +287,7 @@ local function drawLine(frame,a,b,thickness)
     local diff=b-a
     frame.Position=UDim2.fromOffset((a.X+b.X)/2,(a.Y+b.Y)/2)
     frame.Size=UDim2.fromOffset(diff.Magnitude,thickness or 1)
-    frame.Rotation=math.deg(math.atan2(diff.Y,diff.X))
+    frame.Rotation = math.deg(math.atan(diff.Y, diff.X))
     frame.Visible=true
 end
 local function clear(p)
